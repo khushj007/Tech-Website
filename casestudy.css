@@ -1,0 +1,644 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+}
+.fa-circle {
+  color: #f57c00;
+}
+
+span {
+  color: #f57c00;
+}
+
+#hr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 3px;
+  gap: 0.5em;
+}
+#hr div:nth-child(1),
+#hr div:nth-child(3) {
+  width: 4%;
+  border-top: 2px solid #f57c00;
+}
+#hr div:nth-child(2) {
+  border-top: 2px solid rgba(18, 24, 32, 0.1);
+  width: 88%;
+}
+
+/*
+====================================
+    navbar
+ ====================================  
+*/
+.navbar {
+  z-index: 2;
+  position: sticky;
+  width: 100%;
+  height: 15vh;
+  top: 0%;
+  background-color: white;
+  color: black;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.extra {
+  display: none;
+}
+
+.nleft {
+  height: 2em;
+  width: 15%;
+  background-image: url("https://bslthemes.com/html/itsulu/img/logo/logo-dark.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+}
+
+.ncenter > .ul {
+  position: relative;
+  top: 0.7em;
+  display: flex;
+  justify-content: center;
+  gap: 1.4em;
+}
+.ncenter > .ul p {
+  position: relative;
+  cursor: pointer;
+}
+.fa-circle-dot {
+  position: absolute;
+  top: 0%;
+  right: -14%;
+  color: #f57c00 !important
+  ;
+}
+
+#nenterprise,
+#nservices,
+#nsolutions,
+#nothers {
+  position: relative;
+}
+
+.nextra {
+  width: 14em;
+  background-color: white;
+  color: black;
+  position: absolute;
+  padding: 1em, 2em;
+  padding-top: 1.5em;
+  border-radius: 1em;
+  left: -100%;
+  display: none;
+}
+#nenterprise:hover .nextra,
+#nservices:hover .nextra,
+#nsolutions:hover .nextra,
+#nothers:hover .nextra {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  animation: shon 2s ease forwards;
+}
+
+@keyframes shon {
+  0% {
+    opacity: 0;
+    transform: translateY(+3em);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+
+.nextra > p {
+  width: 60%;
+  line-height: 1em;
+  color: black;
+  cursor: pointer;
+}
+.nextra > p:hover {
+  color: #f57c00;
+}
+
+/*
+====================================
+    CTAS
+ ====================================  
+*/
+
+.ctas {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: white;
+  z-index: 2;
+  width: 50px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0.2em;
+  top: 50vh;
+  border-top: 1px solid #232323;
+  border-left: 1px solid #232323;
+}
+.ctas > div {
+  position: relative;
+
+  background-color: transparent;
+  border-bottom: 1px solid #232323;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.ecta {
+  display: none;
+  padding: 0.5em;
+  padding-top: 0.8em;
+  font-size: 0.8em;
+  text-align: center;
+  position: absolute;
+  background-color: rgba(18, 24, 32, 0.8);
+  height: 100%;
+  width: 250%;
+  left: -10em;
+  color: white;
+}
+
+.cta:hover .ecta {
+  display: block;
+}
+/*
+====================================
+    intro
+ ====================================  
+*/
+
+#intro {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#intro > .overlay {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://bslthemes.com/html/itsulu/img/deco/map.png");
+  background-size: cover;
+  opacity: 0.5;
+}
+.ileft {
+  z-index: 1;
+  padding: 1em;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.iright {
+  z-index: 1;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+====================================
+  Case studies
+====================================  
+*/
+
+#cs {
+  padding: 5em 0em;
+  width: 100%;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+#cs > div {
+  /* border: 1px solid red; */
+  width: 89%;
+  height: 30%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image1 {
+  height: 100%;
+  width: 50%;
+  background-image: url("https://bslthemes.com/html/itsulu/img/projects/2.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1em;
+  filter: grayscale(100%);
+}
+.image2 {
+  height: 100%;
+  width: 50%;
+  background-image: url("https://bslthemes.com/html/itsulu/img/projects/3.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1em;
+  filter: grayscale(100%);
+}
+.image3 {
+  height: 100%;
+  width: 50%;
+  background-image: url("https://bslthemes.com/html/itsulu/img/projects/1.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 1em;
+  filter: grayscale(100%);
+}
+
+.image1:hover,
+.image2:hover,
+.image3:hover {
+  filter: grayscale(0%);
+}
+
+.ccontent {
+  padding: 1em;
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.ccontent h5 {
+  height: 4em;
+  width: 10em;
+}
+
+.ccontent .fa-plus {
+  border: 2px solid #f57c00;
+  padding: 30px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ccontent .fa-plus:hover {
+  border: 4px solid #f57c00;
+}
+/*
+====================================
+  numbers
+====================================  
+*/
+
+.numbers {
+  padding: 1em;
+  margin: 3em 0em;
+  width: 100%;
+  height: 4em;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.numbers > div {
+  width: 20%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.numbers > div > p {
+  /* border: 1px solid red; */
+  padding: 8px 15px;
+  border-radius: 50%;
+}
+
+/*
+====================================
+  footer   
+====================================  
+*/
+
+#footer {
+  color: white;
+  padding: 1em 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, #181e26 0, #121820 100%);
+}
+
+#footer .upper p {
+  color: rgba(255, 255, 255, 0.5);
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://bslthemes.com/html/itsulu/img/deco/map.png");
+  background-size: cover;
+  opacity: 0.07;
+}
+
+.upper {
+  height: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.upper .left {
+  z-index: 1;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.upper .center {
+  z-index: 1;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1em;
+}
+.upper .right {
+  z-index: 1;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.upper .right input {
+  width: 60%;
+  height: 15%;
+  border: none;
+  border-radius: 3em;
+}
+.upper .right input::placeholder {
+  text-align: center;
+}
+.upper .right button {
+  width: 60%;
+  height: 15%;
+  border: none;
+  border-radius: 3em;
+  background-color: #f57c00;
+  cursor: pointer;
+}
+.upper .right button:hover {
+  background-color: #ffc107;
+}
+
+.upper .left .image {
+  width: 50%;
+  height: 7%;
+  filter: grayscale(0);
+}
+.buttons {
+  width: 50%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button {
+  backdrop-filter: blur(1em);
+  width: 100%;
+  height: 46%;
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 26%;
+  height: 100%;
+}
+
+.button-content {
+  padding-top: 0.5em;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.button-content * {
+  line-height: 0.3em;
+}
+.button-content h4 {
+  font-size: 1.3em;
+  font-family: Sora, sans-serif;
+}
+#footer .lower {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.l,
+.r {
+  z-index: 1;
+  width: 40%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+}
+.l > p,
+.r > p {
+  color: white;
+}
+.l > p:hover,
+.r > p:hover {
+  color: #f57c00;
+}
+
+#end {
+  bottom: 0%;
+  width: 100%;
+  height: 18vh;
+
+  background-color: #121820;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+====================================
+    media query
+ ====================================  
+*/
+@media (max-width: 1191px) {
+  .navbar {
+    background-color: white;
+    justify-content: space-between;
+  }
+
+  .nleft {
+    margin-left: 2em;
+    width: 10em;
+    background-image: url("	https://bslthemes.com/html/itsulu/img/logo/logo-dark.png");
+  }
+  .ncenter,
+  .nright {
+    display: none;
+  }
+  .extra {
+    display: block;
+    margin-right: 2em;
+  }
+  /* footer change */
+  #footer {
+    height: 1000px;
+  }
+
+  #footer .upper > div:nth-child(1) {
+    width: 80%;
+    height: 40%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #footer .upper > div:nth-child(2) {
+    width: 80%;
+    height: 25%;
+    align-items: center;
+  }
+  #footer .upper > div:nth-child(3) {
+    width: 80%;
+    height: 25%;
+    align-items: center;
+  }
+
+  #footer .upper > div:nth-child(1) .image {
+    width: 30%;
+  }
+}
+
+@media (max-width: 922px) {
+  /* change cs */
+  #cs {
+    height: 1800px;
+
+    /* border: 1px solid red; */
+  }
+  #cs > div {
+    /* border: 1px solid red; */
+    width: 89%;
+    height: 30%;
+  }
+  #cs > div:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+
+  #cs > div > .image1,
+  #cs > div > .image2,
+  #cs > div > .image3 {
+    width: 100%;
+    height: 55%;
+  }
+  #cs > div > .ccontent {
+    width: 100%;
+    height: 45%;
+    /* border: 1px solid red; */
+  }
+}
+
+@media (max-width: 875px) {
+  .l,
+  .r {
+    width: 80%;
+  }
+
+  /* remove arrows */
+  .numbers > p {
+    display: none;
+  }
+  .numbers > div {
+    width: 100%;
+    justify-content: center;
+    gap: 1em;
+  }
+}
+
+@media (max-width: 562px) {
+  #end {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 482px) {
+  .l *,
+  .r * {
+    font-size: 0.5em;
+  }
+}
+@media (max-width: 457px) {
+  .ccontent p {
+    font-size: 0.9em;
+  }
+  .ccontent h3 {
+    font-size: 1.2em;
+  }
+  .ccontent h5 {
+    font-size: 0.8em;
+  }
+  .ccontent .fa-plus {
+    padding: 20px 10px;
+  }
+  .ccontent .fa-plus:hover {
+    border: 2px solid #f57c00;
+  }
+}
+
+@media (max-width: 412px) {
+  #end {
+    font-size: 0.5em;
+  }
+}
